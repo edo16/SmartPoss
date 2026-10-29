@@ -1,0 +1,41 @@
+# Environment dan kredensial
+.env
+.env.*
+!.env.example
+
+# Dependency dan hasil build
+node_modules/
+**/node_modules/
+dist/
+build/
+
+# Database lokal dan file sensitif
+*.sqlite
+*.sqlite3
+*.db
+*.pem
+*.key
+
+# Backup operasional dan arsip
+/backend/backups/
+/backend/backups/**
+*.zip
+*.log
+
+# Konfigurasi alat bantu lokal
+/backend/.agents/
+/backend/.claude/
+/backend/.windsurf/
+
+# File sistem
+.DS_Store
+
+# File cadangan kode lokal
+*.bak
+*.bak-*
+*.backup
+*.backup_*
+
+# Skrip diagnostik lokal
+/backend/src/test-db.js
+/backend/src/test-socket.js

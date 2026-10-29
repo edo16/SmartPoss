@@ -1,0 +1,19 @@
+{
+  "watch": [
+    "src/controllers",
+    "src/services",
+    "src/routes",
+    "src/middleware",
+    "src/lib",
+    "src/server.js"
+  ],
+  "ignore": [
+    "src/test-*.js",
+    "node_modules/**",
+    "prisma/**",
+    "generated/**",
+    "*.log"
+  ],
+  "ext": "js,json",
+  "delay": 1000
+}

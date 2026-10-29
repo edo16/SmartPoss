@@ -38,3 +38,4 @@ Jangan unggah `.env`, kredensial, token, atau kata sandi. Tinjau konfigurasi seb
 
 ## Status
 Proyek portofolio untuk pengembangan aplikasi POS. Pengujian dan peninjauan keamanan tetap diperlukan sebelum penggunaan produksi.
+# SmartPoss

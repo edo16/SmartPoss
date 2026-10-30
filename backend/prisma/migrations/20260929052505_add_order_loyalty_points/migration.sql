@@ -1,3 +1,0 @@
--- AlterTable
-ALTER TABLE "Order" ADD COLUMN     "pointsDiscount" DECIMAL(12,2) NOT NULL DEFAULT 0,
-ADD COLUMN     "pointsUsed" INTEGER NOT NULL DEFAULT 0;

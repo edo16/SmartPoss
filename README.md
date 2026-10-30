@@ -267,61 +267,61 @@ Dokumentasi berikut menampilkan antarmuka dari sepuluh menu utama SmartPOS. Scre
 
 Menampilkan ringkasan performa penjualan, indikator keuangan, perbandingan periode, grafik penjualan, dan aktivitas transaksi terbaru.
 
-![Dashboard Overview](images/dashboard.png)
+![Dashboard Overview](Images/dashboard.png)
 
 ### 2. Point of Sale (POS)
 
 Menampilkan antarmuka kasir untuk memilih produk, mengatur kuantitas, menghitung total transaksi, dan memproses pembayaran.
 
-![Point of Sale](images/pos.png)
+![Point of Sale](Images/pos.png)
 
 ### 3. Inventory
 
 Menampilkan daftar produk, kategori, informasi persediaan stok, serta pengelolaan produk melalui fitur Inventory dan Trash.
 
-![Inventory Management](images/inventory.png)
+![Inventory Management](Images/inventory.png)
 
 ### 4. Transactions
 
 Menampilkan riwayat transaksi, metode pembayaran, status transaksi, serta detail penjualan dan informasi pengembalian dana.
 
-![Transaction Management](images/transactions.png)
+![Transaction Management](Images/transactions.png)
 
 ### 5. Customers
 
 Menampilkan daftar dan informasi pelanggan yang dikelola melalui sistem.
 
-![Customer Management](images/customers.png)
+![Customer Management](Images/customers.png)
 
 ### 6. Expenses
 
 Menampilkan pencatatan pengeluaran operasional dan ringkasan pengeluaran toko.
 
-![Expense Management](images/expenses.png)
+![Expense Management](Images/expenses.png)
 
 ### 7. Analytics
 
 Menampilkan visualisasi dan analisis performa penjualan untuk membantu evaluasi bisnis.
 
-![Business Analytics](images/analytics.png)
+![Business Analytics](Images/analytics.png)
 
 ### 8. Prediksi
 
 Menampilkan estimasi pendapatan berdasarkan pendekatan Historical Median menggunakan data penjualan historis.
 
-![Sales Prediction](images/prediction.png)
+![Sales Prediction](Images/prediction.png)
 
 ### 9. Recap
 
 Menampilkan rekapitulasi data penjualan dan informasi operasional berdasarkan periode laporan.
 
-![Business Recap](images/recap.png)
+![Business Recap](Images/recap.png)
 
 ### 10. Settings
 
 Menampilkan halaman pengaturan aplikasi untuk pengelolaan profil toko, konfigurasi, dan utilitas pengelolaan data.
 
-![Application Settings](images/settings.png)
+![Application Settings](Images/settings.png)
 
 *Catatan: Screenshot disimpan di dalam folder `images/` pada repository. Nama file pada dokumentasi harus disesuaikan dengan nama file gambar yang benar.*
 
@@ -367,86 +367,97 @@ smartpos/
 
 *Struktur di atas merupakan gambaran direktori utama dan dapat menyesuaikan implementasi aktual pada repository.*
 
-## 💻 Running the Application Locally
 
-### Application Requirements
 
-Pastikan perangkat telah memiliki:
 
-- Node.js dan npm.
-- PostgreSQL atau konfigurasi database Prisma yang digunakan proyek.
-- Python 3.
-- Visual Studio Code (opsional).
-- Modern web browser.
 
-### Installation & Setup
+## 💻 Menjalankan Aplikasi Secara Lokal
 
-**1. Clone Repository**
+### Persyaratan Aplikasi
+
+Sebelum menjalankan SmartPOS, pastikan perangkat telah memiliki:
+
+- Node.js dan npm
+- Visual Studio Code (VS Code)
+- Python 3
+- Browser modern
+
+### Instalasi dan Konfigurasi
+
+**1. Download Proyek**
+
+Unduh repository SmartPOS melalui GitHub dengan memilih **Code → Download ZIP**, kemudian ekstrak file yang telah diunduh.
+
+Alternatif lainnya, gunakan Git melalui Terminal:
 
 ```bash
 git clone YOUR_GITHUB_REPOSITORY_URL
-cd smartpos
 ```
 
-**2. Install Backend Dependencies**
+**2. Buka Proyek di Visual Studio Code**
+
+Buka folder `smartpos` menggunakan Visual Studio Code.
+
+Setelah itu, buka Terminal melalui menu **Terminal → New Terminal**.
+
+**3. Jalankan Database Server**
+
+Buka Terminal pertama di VS Code, kemudian jalankan perintah berikut:
 
 ```bash
-cd backend
+npx prisma dev start default
+```
+
+Perintah ini digunakan untuk menjalankan database development menggunakan Prisma Dev.
+
+Biarkan Terminal pertama tetap berjalan selama aplikasi digunakan.
+
+**4. Jalankan Backend Server**
+
+Buka Terminal kedua di VS Code, kemudian jalankan:
+
+```bash
+cd ~/Desktop/smartpos/backend
 npm install
-```
-
-**3. Configure Environment Variables**
-
-Buat file `.env` berdasarkan `.env.example`, kemudian sesuaikan konfigurasi database dan JWT menggunakan kredensial milik sendiri.
-
-Jangan mengunggah file `.env` ke repository publik dan jangan menimpa konfigurasi `.env` yang sudah tersedia.
-
-**4. Prepare Database**
-
-Pastikan PostgreSQL atau layanan database yang digunakan proyek telah berjalan dan konfigurasi koneksinya sesuai dengan environment variables.
-
-**5. Apply Database Migrations**
-
-Dari direktori backend, jalankan:
-
-```bash
-npx prisma migrate deploy
-```
-
-Pastikan konfigurasi Prisma dan koneksi database telah sesuai sebelum menjalankan migration.
-
-**6. Start Backend Server**
-
-Masih dari direktori `backend`, jalankan:
-
-```bash
 npm run dev
 ```
 
-Backend berjalan pada:
+Perintah tersebut digunakan untuk menginstal dependencies backend dan menjalankan server aplikasi.
 
-```text
-http://localhost:5000
-```
+Backend berjalan pada port `5000`.
 
-**7. Start Frontend Server**
+Biarkan Terminal kedua tetap berjalan.
 
-Buka terminal baru dari direktori utama proyek:
+**5. Jalankan Frontend Server**
+
+Buka Terminal ketiga di VS Code, kemudian jalankan:
 
 ```bash
-cd smartpos
-python3 -m http.server 8000 --directory frontend
+cd ~/Desktop/smartpos/frontend
+python3 -m http.server 8000
 ```
 
-**8. Access the Application**
+Perintah tersebut digunakan untuk menjalankan frontend agar dapat diakses melalui browser.
 
-Buka browser dan kunjungi:
+Frontend berjalan pada port `8000`.
 
-```text
-http://localhost:8000
-```
+Biarkan Terminal ketiga tetap berjalan.
 
-*Catatan: Sesuaikan konfigurasi database, environment variables, dan langkah inisialisasi Prisma dengan konfigurasi proyek yang digunakan. Jika menggunakan database seed, atur `SEED_DEFAULT_PASSWORD` menggunakan kata sandi sendiri dengan minimal 12 karakter.*
+**6. Akses Aplikasi SmartPOS**
+
+Setelah database, backend, dan frontend berhasil dijalankan, buka browser dan kunjungi alamat berikut:
+
+http://localhost:8000/
+
+SmartPOS kini dapat diakses melalui browser pada perangkat lokal.
+
+### Catatan Penting
+
+- Pastikan seluruh dependencies dan konfigurasi database telah disiapkan sebelum menjalankan aplikasi.
+- Pastikan konfigurasi koneksi database pada backend sesuai dengan database yang dijalankan melalui Prisma Dev.
+- Jika diperlukan, jalankan database migration sebelum menggunakan aplikasi.
+- Ketiga proses pada Terminal harus tetap berjalan selama aplikasi digunakan.
+- Perintah direktori `~/Desktop/smartpos` merupakan contoh lokasi folder pada perangkat macOS. Sesuaikan lokasi direktori dengan tempat penyimpanan proyek.
 
 ## 🔐 Security Considerations
 
@@ -460,30 +471,3 @@ Beberapa hal yang perlu diperhatikan:
 - Pastikan koneksi database dikonfigurasi dengan aman.
 - Lakukan pemeriksaan terhadap endpoint API dan validasi input.
 - Lakukan pengujian serta peninjauan keamanan sebelum deployment produksi.
-
-## 📌 Project Status
-
-**Personal Portfolio Project**
-
-SmartPOS merupakan proyek pengembangan aplikasi Point of Sale berbasis web yang berfokus pada integrasi pengelolaan transaksi penjualan, persediaan produk, pelanggan, pengeluaran operasional, analisis bisnis, prediksi pendapatan, dan rekapitulasi laporan.
-
-Melalui proyek ini, beberapa keterampilan teknis yang diterapkan meliputi:
-
-- Full-Stack Web Development.
-- Frontend Development.
-- Backend Development.
-- REST API Development.
-- Relational Database Management.
-- Prisma ORM & Database Migration.
-- CRUD Operations.
-- Transaction & Refund Management.
-- Data Visualization.
-- Statistical Data Analysis.
-- Historical Median Forecasting.
-- Real-Time Communication.
-
-Pengujian, optimasi, dan peninjauan keamanan lebih lanjut tetap diperlukan sebelum aplikasi digunakan dalam lingkungan produksi.
-
----
-
-**Developed as an Independent Portfolio Project.**

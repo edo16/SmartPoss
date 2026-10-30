@@ -267,61 +267,61 @@ The following documentation presents the user interface of SmartPOS's ten main m
 
 Displays sales performance summaries, financial indicators, period comparisons, sales charts, and recent transaction activity.
 
-![Dashboard Overview](images/dashboard.png)
+![Dashboard Overview](Images/dashboard.png)
 
 ### 2. Point of Sale (POS)
 
 Displays the cashier interface for selecting products, adjusting quantities, calculating transaction totals, and processing payments.
 
-![Point of Sale](images/pos.png)
+![Point of Sale](Images/pos.png)
 
 ### 3. Inventory
 
 Displays product lists, categories, stock information, and product management through the Inventory and Trash features.
 
-![Inventory Management](images/inventory.png)
+![Inventory Management](Images/inventory.png)
 
 ### 4. Transactions
 
 Displays transaction history, payment methods, transaction statuses, sales details, and refund information.
 
-![Transaction Management](images/transactions.png)
+![Transaction Management](Images/transactions.png)
 
 ### 5. Customers
 
 Displays customer lists and information managed through the system.
 
-![Customer Management](images/customers.png)
+![Customer Management](Images/customers.png)
 
 ### 6. Expenses
 
 Displays operational expense records and store expense summaries.
 
-![Expense Management](images/expenses.png)
+![Expense Management](Images/expenses.png)
 
 ### 7. Analytics
 
 Displays business performance visualizations and sales analytics to support business evaluation.
 
-![Business Analytics](images/analytics.png)
+![Business Analytics](Images/analytics.png)
 
 ### 8. Prediction
 
 Displays revenue estimates based on the Historical Median approach using historical sales data.
 
-![Sales Prediction](images/prediction.png)
+![Sales Prediction](Images/prediction.png)
 
 ### 9. Recap
 
 Displays sales summaries and operational information based on the selected reporting period.
 
-![Business Recap](images/recap.png)
+![Business Recap](Images/recap.png)
 
 ### 10. Settings
 
 Displays the application settings page for managing store profiles, configurations, and data management utilities.
 
-![Application Settings](images/settings.png)
+![Application Settings](Images/settings.png)
 
 *Note: Screenshots are stored in the `images/` directory in the repository. Image filenames in this documentation must match the actual filenames.*
 

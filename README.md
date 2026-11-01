@@ -323,7 +323,6 @@ Menampilkan halaman pengaturan aplikasi untuk pengelolaan profil toko, konfigura
 
 ![Application Settings](Images/settings.png)
 
-*Catatan: Screenshot disimpan di dalam folder `images/` pada repository. Nama file pada dokumentasi harus disesuaikan dengan nama file gambar yang benar.*
 
 ## 📂 Project Structure
 

@@ -323,7 +323,6 @@ Displays the application settings page for managing store profiles, configuratio
 
 ![Application Settings](Images/settings.png)
 
-*Note: Screenshots are stored in the `images/` directory in the repository. Image filenames in this documentation must match the actual filenames.*
 
 ## 📂 Project Structure
 
